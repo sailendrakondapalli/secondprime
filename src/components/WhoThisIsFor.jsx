@@ -6,7 +6,7 @@ const cards = [
   { icon: '🧭', title: 'Feeling Stuck', desc: 'Feel stuck or uncertain about your next chapter in life.', slug: 'feeling-stuck' },
   { icon: '💛', title: 'Lost Yourself', desc: 'Lost touch with yourself after years of prioritizing others.', slug: 'lost-yourself' },
   { icon: '✨', title: 'Seeking Clarity', desc: 'Seeking clarity, confidence, or a sense of renewal.', slug: 'seeking-clarity' },
-  { icon: '🌸', title: 'Finding Purpose', desc: 'Want to rediscover purpose and meaning in midlife.', slug: 'finding-purpose' },
+  { icon: '🎯', title: 'Finding Purpose', desc: 'Want to rediscover purpose and meaning in midlife.', slug: 'finding-purpose' },
 ]
 
 export default function WhoThisIsFor() {

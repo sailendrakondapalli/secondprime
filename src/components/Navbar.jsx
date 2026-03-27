@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import logoImg from '../assets/image.png'
 
 const INSTAGRAM = 'https://www.instagram.com/secondprime2377?igsh=eDE3cnd3MW4zaWs5&utm_source=qr'
 const YOUTUBE = 'https://youtube.com/@secondprime2026?si=Vh1R6s2HmZIWOCj6'
@@ -38,8 +39,8 @@ export default function Navbar() {
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px', height: 72, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
         <a href="#hero" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <FlowerIcon size={32} />
-          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, fontWeight: 600, color: '#c9a96e', letterSpacing: '0.02em' }}>
+          <img src={logoImg} alt="JCM Second Prime Logo" style={{ width: 42, height: 42, borderRadius: '50%', objectFit: 'cover' }} />
+          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: scrolled ? '#0a1f44' : '#ffffff', letterSpacing: '0.02em' }}>
             JCM Second Prime
           </span>
         </a>
@@ -49,11 +50,11 @@ export default function Navbar() {
           {links.map(l => (
             <a key={l.href} href={l.href} style={{
               fontFamily: 'Poppins, sans-serif', fontSize: 13, fontWeight: 500,
-              color: '#5a5a5a', textDecoration: 'none', letterSpacing: '0.04em',
+              color: scrolled ? '#5a5a5a' : '#ffffff', textDecoration: 'none', letterSpacing: '0.04em',
               transition: 'color 0.2s',
             }}
               onMouseEnter={e => e.target.style.color = '#c9a96e'}
-              onMouseLeave={e => e.target.style.color = '#5a5a5a'}
+              onMouseLeave={e => e.target.style.color = scrolled ? '#5a5a5a' : '#ffffff'}
             >{l.label}</a>
           ))}
           {/* Social icons */}

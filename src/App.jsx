@@ -15,14 +15,28 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import CardDetailPage from './pages/CardDetailPage'
 
+function ParallaxDivider({ image, overlay = 'rgba(10,20,40,0.45)', height = 320 }) {
+  return (
+    <div style={{
+      height,
+      backgroundImage: `linear-gradient(${overlay}, ${overlay}), url(${image})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed',
+    }} />
+  )
+}
+
 function HomePage() {
   return (
     <>
       <Navbar />
       <Hero />
       <About />
+      <ParallaxDivider image="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80" />
       <WhoThisIsFor />
       <Services />
+      <ParallaxDivider image="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=1600&q=80" overlay="rgba(10,31,68,0.5)" />
       <ContactForm />
       <CTA />
       <Footer />

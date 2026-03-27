@@ -9,6 +9,7 @@ const cardData = {
     icon: '🧭',
     title: 'Feeling Stuck',
     subtitle: 'You deserve to move forward — with clarity and confidence.',
+    img: 'https://images.unsplash.com/photo-1541199249251-f713e6145474?w=1400&q=80',
     body: [
       "That heavy feeling of being frozen in place — not knowing which direction to go, what to do next, or even who you are anymore — is one of the most common experiences in midlife.",
       "You may have spent decades building a life around others: your career, your family, your responsibilities. And somewhere along the way, you lost the thread back to yourself.",
@@ -22,6 +23,7 @@ const cardData = {
     icon: '💛',
     title: 'Lost Yourself',
     subtitle: 'Rediscovering you is the most important journey you will ever take.',
+    img: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1400&q=80',
     body: [
       "For years — maybe decades — you have been the caregiver, the provider, the one who holds everything together. You put everyone else first, and it felt right. It felt like love.",
       "But somewhere in all of that giving, you stopped asking: what do I want? What do I need? Who am I, outside of all these roles?",
@@ -35,6 +37,7 @@ const cardData = {
     icon: '✨',
     title: 'Seeking Clarity',
     subtitle: 'When the fog lifts, everything becomes possible.',
+    img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=80',
     body: [
       "Clarity is not something you find all at once. It comes in layers — through honest reflection, through asking better questions, through giving yourself permission to want more.",
       "Maybe you feel overwhelmed by choices, or paralyzed by the fear of making the wrong one. Maybe you know something needs to change but you cannot quite name what it is.",
@@ -45,9 +48,10 @@ const cardData = {
     accent: '#a8d8e8',
   },
   'finding-purpose': {
-    icon: '🌸',
+    icon: '🎯',
     title: 'Finding Purpose',
     subtitle: 'Your most meaningful chapter may still be ahead of you.',
+    img: 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=1400&q=80',
     body: [
       "Purpose is not reserved for the young. In fact, many people discover their deepest sense of meaning and direction in midlife — once the noise of early adulthood settles.",
       "You may be asking: Is this all there is? What am I here for? What would truly make me feel alive and fulfilled? These are not signs of a crisis — they are signs of growth.",
@@ -86,9 +90,11 @@ export default function CardDetailPage() {
   return (
     <div style={{ minHeight:'100vh', background:'#fdf8f5' }}>
 
-      {/* Hero with gradient bg */}
+      {/* Hero with bg image */}
       <div style={{
-        minHeight:'60vh', background: data.gradient,
+        minHeight:'60vh',
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${data.img})`,
+        backgroundSize:'cover', backgroundPosition:'center',
         display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
         textAlign:'center', padding:'100px 24px 80px', position:'relative', overflow:'hidden',
       }}>
